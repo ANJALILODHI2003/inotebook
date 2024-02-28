@@ -11,8 +11,9 @@ const Notes = (props) => {
     useEffect(() => {
         if(localStorage.getItem('token')){
             getNotes()
-        }
+        }else{
         navigate("/login")
+        }
         // eslint-disable-next-line
     }, [])
     const ref = useRef(null)
